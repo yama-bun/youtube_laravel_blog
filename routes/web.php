@@ -14,4 +14,12 @@ Route::get('/', 'BlogController@showList')->name('blogs');
 
 Route::get('/blog/create', 'BlogController@showCreate')->name('create');
 
+Route::post('/blog/store', 'BlogController@exeStore')->name('store');
+
 Route::get('/blog/{id}', 'BlogController@showDetail')->name('show');
+
+Route::get('/blog/edit/{id}', 'BlogController@edit')->name('edit');
+
+Route::post('/blog/update', 'BlogController@update')->name('update');
+
+Route::post('/blog/delete/{id}', 'BlogController@delete')->name('delete');
